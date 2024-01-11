@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Checker</title>
+</head>
+<body>
+
+<form id="inputForm" onsubmit="checkInput(); return false;">
+    <label for="inputField">Enter text:</label>
+    <input type="text" id="inputField" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function checkInput() {
+        var userInput = document.getElementById('inputField').value.toLowerCase();
+
+        if (userInput === 'unblock!securly') {
+            window.location.href = 'hax.html';
+        } else if (userInput === 'hahaha') {
+            alert('Nice try! But you are not allowed.');
+        } else {
+            alert('Invalid input. Please try again.');
+        }
+    }
+</script>
+
+</body>
+</html>
